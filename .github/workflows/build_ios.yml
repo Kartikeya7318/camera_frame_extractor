@@ -24,7 +24,7 @@ jobs:
 
     - name: Install CocoaPods dependencies
       run: |
-        cd ios
+        cd example/ios
         pod install
       working-directory: ios
 
