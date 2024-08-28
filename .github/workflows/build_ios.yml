@@ -19,14 +19,18 @@ jobs:
     - name: Set up Flutter
       uses: subosito/flutter-action@v2
       with:
-        flutter-version: '3.24.0' # Replace this with the latest stable version if needed
+        flutter-version: '3.24.0' # Specify the Flutter version
 
+    - name: List Directories
+      run: |
+        ls -la
+        ls -la example
+        ls -la example/ios
 
     - name: Install CocoaPods dependencies
       run: |
         cd example/ios
         pod install
-      working-directory: ios
 
     - name: Build iOS
       run: |
